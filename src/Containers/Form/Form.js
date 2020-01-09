@@ -32,8 +32,8 @@ class Form extends Component {
       this.props.setLocation(this.state.location);
 
       //splice user's location into city and state
-      //mapdispatch -- update user's location
 
+      this.findLocations(this.state.location);
       //iterate through data, finding locations -- must match city AND state
       //push into new array in mapDispatch -- filteredlocations
       //Router to locations page
@@ -43,6 +43,13 @@ class Form extends Component {
     } else {
       this.handleError();
     }
+  }
+
+  findLocations = (location) => {
+    const splitLocation = location.split(',');
+    const city = splitLocation[0];
+    const state = splitLocation[1];
+    console.log(city, state);
   }
 
   handleError() {
