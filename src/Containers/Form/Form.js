@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './Form.scss';
+import { connect } from 'react-redux';
+import { currentUser } from '../../actions/actions';
+
 
 
 class Form extends Component {
@@ -24,7 +27,20 @@ class Form extends Component {
   checkLocation = (location) => {
     const regex = /([A-Za-z]+(?: [A-Za-z]+)*),? ([A-Za-z]{2})/;
     if (location.match(regex)) {
-      console.log(true);
+      this.props.currentUser(this.state.username);
+
+
+      //mapdispatch -- update user's name
+
+      //splice user's location into city and state
+      //mapdispatch -- update user's location
+
+      //iterate through data, finding locations -- must match city AND state
+      //push into new array in mapDispatch -- filteredlocations
+      //Router to locations page
+      //render LocationsContainer
+
+
     } else {
       this.handleError();
     }
@@ -71,4 +87,11 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export const mapDispatchToProps = dispatch => ({
+  currentUser: user => dispatch(currentUser(user))
+})
+
+
+
+
+export default connect(null, mapDispatchToProps)(Form);

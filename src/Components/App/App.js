@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Header from '../Header/Header';
-import Form from '../Form/Form'
+import Form from '../../Containers/Form/Form'
 
 function App() {
   return (
