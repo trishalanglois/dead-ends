@@ -3,7 +3,10 @@ import './Header.scss';
 
 function Header() {
   return (
-    <h1> This is my header component </h1>
+    <nav className="header">
+      <h1 className="main-header">DEAD ENDS</h1>
+      <div className="header-line"></div>
+    </nav>
   )
 }
 
