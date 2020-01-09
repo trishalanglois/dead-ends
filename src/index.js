@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './scss/index.scss';
+import App from './Components/App/App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { rootReducer } from './reducers';
+// import { rootReducer } from './reducers';
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Link} from 'react-router-dom'
 
