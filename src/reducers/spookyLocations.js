@@ -1,4 +1,4 @@
-export const hauntedLocations = (state = [], action) => {
+export const spookyLocations = (state = [], action) => {
   switch(action.type) {
     case 'SET_SPOOKY_LOCATIONS':
       return action.locations
