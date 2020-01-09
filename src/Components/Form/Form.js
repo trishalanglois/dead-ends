@@ -13,7 +13,9 @@ class Form extends Component {
 
   render() {
     return (
-      <p> this is my form component eeeeeee </p>
+      <main className="form-container">
+
+      </main>
 
     )
   }
