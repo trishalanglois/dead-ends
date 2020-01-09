@@ -7,7 +7,8 @@ class Form extends Component {
     super();
     this.state = {
       username: '',
-      location: ''
+      location: '',
+      error: false
     }
   }
 
@@ -25,16 +26,19 @@ class Form extends Component {
     if (location.match(regex)) {
       console.log(true);
     } else {
-      console.log(false);
+      this.handleError();
     }
   }
 
+  handleError() {
+    this.setState({error: true})
+  }
 
   render() {
     return (
       <main className="form-container">
         <form>
-          <label className="input-label" for="username">Ghost Hunter Name</label>
+          <label className="input-label">Ghost Hunter Name</label>
           <input
             className="form-input"
             value={this.state.username}
@@ -42,7 +46,7 @@ class Form extends Component {
             type="text"
             onChange={(e) => this.handleChange(e)}
           />
-          <label className="input-label" for="user-location">Location</label>
+          <label className="input-label">Location</label>
           <input
             className="form-input"
             placeholder="e.g. Denver, CO"
@@ -51,6 +55,9 @@ class Form extends Component {
             type="text"
             onChange={(e) => this.handleChange(e)}
           />
+          {this.state.error &&
+            <p className="error">Please enter a valid city and state.</p>
+          }
           <button
             className="form-button"
             type="button"
