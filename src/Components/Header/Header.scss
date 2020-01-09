@@ -1,0 +1,23 @@
+@import '../../scss/variables';
+
+.header {
+  background-color: $dark-color;
+  color: $light-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-header {
+  height: 2em;
+  font-family: $accent-font;
+  font-size: 4em;
+  font-weight: 200;
+  margin-bottom: -.5em;
+}
+
+.header-line {
+  width: 26em;
+  border-top: 1px solid $light-color;
+  height: .5em;
+}
