@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Form.scss';
 import { connect } from 'react-redux';
-import { currentUser } from '../../actions/actions';
+import { currentUser, setLocation } from '../../actions/actions';
 
 
 
@@ -27,10 +27,9 @@ class Form extends Component {
   checkLocation = (location) => {
     const regex = /([A-Za-z]+(?: [A-Za-z]+)*),? ([A-Za-z]{2})/;
     if (location.match(regex)) {
-      this.props.currentUser(this.state.username);
+      this.props.updateUser(this.state.username);
 
-
-      //mapdispatch -- update user's name
+      this.props.setLocation(this.state.location);
 
       //splice user's location into city and state
       //mapdispatch -- update user's location
@@ -88,7 +87,8 @@ class Form extends Component {
 }
 
 export const mapDispatchToProps = dispatch => ({
-  currentUser: user => dispatch(currentUser(user))
+  updateUser: user => dispatch(currentUser(user)),
+  setLocation: location => dispatch(setLocation(location))
 })
 
 

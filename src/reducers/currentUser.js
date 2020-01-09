@@ -1,9 +1,7 @@
-export const currentUser = (state = {}, action) => {
+export const currentUser = (state = '', action) => {
   switch (action.type) {
     case 'SET_USER':
-      return {
-        name: action.name
-      }
+      return action.name
     default:
       return state
   }
