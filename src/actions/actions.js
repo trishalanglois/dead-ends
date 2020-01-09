@@ -7,3 +7,8 @@ export const setLocation = location => ({
   type: 'SET_LOCATION',
   location
 })
+
+export const setSpookyLocations = locations => ({
+  type: 'SET_SPOOKY_LOCATIONS',
+  locations
+})

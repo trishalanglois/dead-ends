@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Form.scss';
 import { connect } from 'react-redux';
-import { currentUser, setLocation } from '../../actions/actions';
+import { currentUser, setLocation, setSpookyLocations } from '../../actions/actions';
 import locationData from '../../data.json'
 
 class Form extends Component {
@@ -48,13 +48,12 @@ class Form extends Component {
     const splitLocation = location.split(', ');
     const city = splitLocation[0];
     const state = splitLocation[1];
-    console.log(city, state);
-
     const filteredLocations = locationData.filter(spookySpot => {
-      return spookySpot.state_abbrev === state
+      return spookySpot.city === city && spookySpot.state_abbrev === state
     })
 
-    console.log(filteredLocations);
+    this.props.setSpookyLocations(filteredLocations);
+
   }
 
   handleError() {
@@ -100,7 +99,8 @@ class Form extends Component {
 
 export const mapDispatchToProps = dispatch => ({
   updateUser: user => dispatch(currentUser(user)),
-  setLocation: location => dispatch(setLocation(location))
+  setLocation: location => dispatch(setLocation(location)),
+  setSpookyLocations: locations => dispatch(setSpookyLocations(locations))
 })
 
 
