@@ -1,9 +1,14 @@
 import React from 'react';
 import './App.scss';
+import Header from '../Header/Header';
+import Form from '../Form/Form'
 
 function App() {
   return (
-    <h1>This is my App component</h1>
+    <>
+      <Header />
+      <Form />
+    </>
   );
 }
 
