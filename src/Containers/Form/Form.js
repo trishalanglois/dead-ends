@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import './Form.scss';
 import { connect } from 'react-redux';
 import { currentUser, setLocation, setSpookyLocations } from '../../actions/actions';
-import locationData from '../../data.json'
+import locationData from '../../data.json';
+import { Redirect, Link } from 'react-router-dom';
+
 
 class Form extends Component {
   constructor() {
@@ -10,7 +12,8 @@ class Form extends Component {
     this.state = {
       username: '',
       location: '',
-      error: false
+      error: false,
+      ready: false
     }
   }
 
@@ -27,18 +30,10 @@ class Form extends Component {
     const regex = /([A-Za-z]+(?: [A-Za-z]+)*),? ([A-Za-z]{2})/;
     if (location.match(regex)) {
       this.props.updateUser(this.state.username);
-
       this.props.setLocation(this.state.location);
-
-      //splice user's location into city and state
-
       this.findLocations(this.state.location);
-      //iterate through data, finding locations -- must match city AND state
-      //push into new array in mapDispatch -- filteredlocations
-      //Router to locations page
-      //render LocationsContainer
-
-
+      console.log('yeah!');
+      this.setState({ ready: true })
     } else {
       this.handleError();
     }
@@ -61,6 +56,9 @@ class Form extends Component {
   }
 
   render() {
+    if (this.state.ready) {
+      return <Redirect to='/locations' />
+    }
     return (
       <main className="form-container">
         <form>
@@ -84,13 +82,17 @@ class Form extends Component {
           {this.state.error &&
             <p className="error">Please enter a valid city and state.</p>
           }
-          <button
-            className="form-button"
-            type="button"
-            onClick={(e) => this.handleLocationSubmit(e)}
-          >
-            Begin the Hunt
-          </button>
+
+          // <Link to="/locations">
+            <button
+              className="form-button"
+              type="button"
+              onClick={(e) => this.handleLocationSubmit(e)}
+            >
+              Begin the Hunt
+            </button>
+          // </Link>
+
         </form>
       </main>
     )

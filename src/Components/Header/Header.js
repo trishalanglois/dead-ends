@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.scss';
 
-function Header() {
+const Header = () => {
   return (
     <nav className="header">
       <h1 className="main-header">DEAD ENDS</h1>

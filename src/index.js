@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './scss/index.scss';
-import App from './Components/App/App';
+import { App } from './Components/App/App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -17,6 +17,6 @@ ReactDOM.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>,
-  // </Provider>,
+  </Provider>,
   document.getElementById('root')
 );
