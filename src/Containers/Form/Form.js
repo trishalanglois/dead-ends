@@ -13,7 +13,8 @@ class Form extends Component {
       username: '',
       location: '',
       error: false,
-      ready: false
+      ready: false,
+      noLocations: false
     }
   }
 
@@ -32,8 +33,6 @@ class Form extends Component {
       this.props.updateUser(this.state.username);
       this.props.setLocation(this.state.location);
       this.findLocations(this.state.location);
-      console.log('yeah!');
-      this.setState({ ready: true })
     } else {
       this.handleError();
     }
@@ -46,8 +45,13 @@ class Form extends Component {
     const filteredLocations = locationData.filter(spookySpot => {
       return spookySpot.city === city && spookySpot.state_abbrev === state
     })
-
-    this.props.setSpookyLocations(filteredLocations);
+    if (!filteredLocations.length) {
+      this.setState({noLocations: true})
+    } else {
+      this.setState({ ready: true })
+      console.log(filteredLocations);
+      this.props.setSpookyLocations(filteredLocations);
+    }
 
   }
 
@@ -82,8 +86,7 @@ class Form extends Component {
           {this.state.error &&
             <p className="error">Please enter a valid city and state.</p>
           }
-
-          // <Link to="/locations">
+          {this.state.noLocations && <p className="error">This location is not haunted.  Please enter a spookier location.</p>}
             <button
               className="form-button"
               type="button"
@@ -91,8 +94,6 @@ class Form extends Component {
             >
               Begin the Hunt
             </button>
-          // </Link>
-
         </form>
       </main>
     )
