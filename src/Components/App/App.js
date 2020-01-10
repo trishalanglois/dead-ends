@@ -3,7 +3,7 @@ import './App.scss';
 import Header from '../Header/Header';
 import Form from '../../Containers/Form/Form';
 import { Route } from 'react-router-dom';
-import LocationContainer from '../LocationContainer/LocationContainer';
+import LocationContainer from '../../Containers/LocationContainer/LocationContainer';
 
 
 export class App extends Component {
