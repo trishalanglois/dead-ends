@@ -2,7 +2,7 @@
 
 .header {
   background-color: $dark-color;
-  color: $light-color;
+  color: $light-grey;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,6 +18,6 @@
 
 .header-line {
   width: 26em;
-  border-top: 1px solid $light-color;
+  border-top: 1px solid $medium-grey;
   height: .5em;
 }
