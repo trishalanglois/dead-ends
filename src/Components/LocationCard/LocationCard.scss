@@ -1,0 +1,20 @@
+@import '../../scss/variables';
+
+.card {
+  // box-shadow: 0 30px 20px -20px $dark-grey;
+  font-family: $main-font;
+  width: 50em;
+  margin-bottom: 2em;
+  padding: 2em;
+  border: 1px solid $dark-grey;
+}
+
+.card-title {
+  font-family: $main-font;
+  color: $medium-grey
+}
+
+.card-description {
+  color: $light-grey;
+  font-family: $main-font;
+}

@@ -1,0 +1,13 @@
+@import '../../scss/variables';
+
+.locations-container {
+  background-color: $dark-color;
+}
+
+.location-subheader {
+  font-family: $accent-font;
+  font-size: 3em;
+  margin: 0px auto;
+  color: $light-grey;
+  font-weight: 200;
+}

@@ -11,13 +11,9 @@ export class App extends Component {
   render() {
     return (
       <>
-        <Route exact path="/" component={Header}/>
-
-        <Route path="/" component={Form}/>
-
+        <Route path="/" component={Header}/>
+        <Route exact path="/" component={Form}/>
         <Route path="/locations" component={LocationContainer}/>
-
-
       </>
 
     )

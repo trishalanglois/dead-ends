@@ -1,12 +1,11 @@
 import React from 'react';
 import './LocationCard.scss';
 
-export const LocationCard = ({ location, description, key }) => {
+export const LocationCard = ({ location, description }) => {
 
   return (
-    <aside>
-      <h3>{location}</h3>
-      <p>{description}</p>
+    <aside className="card">
+      <p className="card-description">{description}</p>
     </aside>
   )
 }
