@@ -1,7 +1,7 @@
 import React from 'react';
 import './LocationCard.scss';
 
-export const LocationCard = ({ location, description }) => {
+export const LocationCard = ({ location, description, key }) => {
 
   return (
     <aside>
