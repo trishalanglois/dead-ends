@@ -49,7 +49,6 @@ class Form extends Component {
       this.setState({noLocations: true})
     } else {
       this.setState({ ready: true })
-      console.log(filteredLocations);
       this.props.setSpookyLocations(filteredLocations);
     }
 
