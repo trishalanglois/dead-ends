@@ -24,7 +24,14 @@ export const FavoritesContainer = ({ favoriteLocations }) => {
           <h3 className="favorites-button">Back</h3>
         </Link>
       </div>
-      {showLocations}
+      <div className="main-section">
+        <aside className="locations-cards-container">
+          {showLocations}
+        </aside>
+        <aside className="map-container">
+          //render MapContainer component
+        </aside>
+      </div>
     </main>
   )
 }
