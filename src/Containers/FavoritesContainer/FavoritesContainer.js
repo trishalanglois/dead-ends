@@ -19,12 +19,19 @@ export const FavoritesContainer = ({ favoriteLocations }) => {
   return (
     <main className="locations-container">
       <div className="locations-container-subheader">
-        <h2 className="location-subheader">Favorite Locations</h2>
+        <h2 className="location-subheader">Favorite Spooky Locations</h2>
         <Link to={'/locations'}>
           <h3 className="favorites-button">Back</h3>
         </Link>
       </div>
-      {showLocations}
+      <div className="main-section">
+        <aside className="locations-cards-container">
+          {showLocations}
+        </aside>
+        <aside className="map-container">
+          
+        </aside>
+      </div>
     </main>
   )
 }

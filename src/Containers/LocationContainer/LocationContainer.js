@@ -3,7 +3,7 @@ import './LocationContainer.scss';
 import LocationCard from '../LocationCard/LocationCard';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-
+import { GoogleApiWrapper } from 'google-maps-react';
 
 
 export const LocationContainer = ({ locations, location }) => {
@@ -26,7 +26,14 @@ export const LocationContainer = ({ locations, location }) => {
           <h3 className="favorites-button">View Favorites</h3>
         </Link>
       </div>
-      {showLocations}
+      <div className="main-section">
+        <aside className="locations-cards-container">
+          {showLocations}
+        </aside>
+        <aside className="map-container">
+          
+        </aside>
+      </div>
     </main>
   )
 }
