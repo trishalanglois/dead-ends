@@ -4,6 +4,7 @@ import LocationCard from '../LocationCard/LocationCard';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { GoogleApiWrapper } from 'google-maps-react';
+import MapContainer from '../../Components/MapContainer/MapContainer';
 
 
 export const LocationContainer = ({ locations, location }) => {
@@ -31,7 +32,7 @@ export const LocationContainer = ({ locations, location }) => {
           {showLocations}
         </aside>
         <aside className="map-container">
-          
+          <MapContainer />
         </aside>
       </div>
     </main>
