@@ -11,11 +11,21 @@
   background-position: center;
 }
 
+.locations-container-subheader {
+  display: flex;
+  justify-content: space-between;
+}
+
 .location-subheader {
   font-family: $accent-font;
   font-size: 3em;
-  margin: 0px 42% 10px 42%;
+  margin: 0px 10% 10px 10%;
   color: $light-grey;
   font-weight: 200;
   width: auto;
+}
+
+.favorites-button {
+  @extend .location-subheader;
+  font-size: 2em;
 }

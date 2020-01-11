@@ -17,7 +17,10 @@ export const LocationContainer = ({ locations, location }) => {
 
   return (
     <main className="locations-container">
-      <h2 className="location-subheader">{location}</h2>
+      <div className="locations-container-subheader">
+        <h2 className="location-subheader">{location}</h2>
+        <h3 className="favorites-button">View Favorites</h3>
+      </div>
       {showLocations}
     </main>
   )
