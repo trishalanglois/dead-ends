@@ -1,7 +1,14 @@
 @import '../../scss/variables';
 
 .locations-container {
-  background-color: $dark-color;
+  background-image: url('../../images/background.jpg');
+  background-size: contain;
+  background-position: center;
+  height: 88vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .location-subheader {

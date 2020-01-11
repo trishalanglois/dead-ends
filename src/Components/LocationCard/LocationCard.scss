@@ -5,14 +5,13 @@
   width: 50em;
   margin: 2em;
   padding: 2em 2em 1em 2em;
-  background-color: $dark-grey;
-  border: 1px solid $dark-grey;
+  background-color: $light-grey;
 }
 
 .card-title {
   font-family: $main-font;
   color: $dark-color;
-  font-size: 1.5em;
+  font-size: 2em;
   margin-top: 0em;
 }
 
@@ -20,4 +19,32 @@
   color: $dark-color;
   font-family: $main-font;
   font-size: 1.15em;
+}
+
+.card-title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-button-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.card-button {
+  display: block;
+  float: right;
+  font-size: 1.25em;
+  font-family: $main-font;
+  margin: .25em;
+  width: 100%;
+  border-style: none;
+  background-color: $medium-grey;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.01);
+      background-color: $dark-grey;
+    }
+
 }
