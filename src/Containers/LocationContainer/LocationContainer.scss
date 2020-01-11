@@ -6,13 +6,15 @@
   justify-content: space-between;
   background-color: $dark-color;
   height: 100%;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 
 .location-subheader {
   font-family: $accent-font;
   font-size: 3em;
-  margin: 0px 2em 1em 2em;
+  margin: 0px 2em .5em 2em;
   color: $light-grey;
   font-weight: 200;
   width: auto;

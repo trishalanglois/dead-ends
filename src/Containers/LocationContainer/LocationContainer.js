@@ -31,7 +31,7 @@ export const LocationContainer = ({ locations, location }) => {
           {showLocations}
         </aside>
         <aside className="map-container">
-          //render MapContainer component
+          
         </aside>
       </div>
     </main>
