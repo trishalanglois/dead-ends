@@ -46,5 +46,8 @@
       transform: scale(1.01);
       background-color: $dark-grey;
     }
+    &:focus {
+      background-color: $wishlist-color;
+    }
 
 }

@@ -12,3 +12,8 @@ export const setSpookyLocations = locations => ({
   type: 'SET_SPOOKY_LOCATIONS',
   locations
 })
+
+export const updateWishlist = location => ({
+  type: 'UPDATE_WISHLIST',
+  location
+})

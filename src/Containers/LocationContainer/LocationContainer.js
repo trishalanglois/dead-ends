@@ -1,6 +1,6 @@
 import React from 'react';
 import './LocationContainer.scss';
-import LocationCard from '../../Components/LocationCard/LocationCard';
+import LocationCard from '../LocationCard/LocationCard';
 import { connect } from 'react-redux';
 
 export const LocationContainer = ({ locations, location }) => {
@@ -9,8 +9,7 @@ export const LocationContainer = ({ locations, location }) => {
       <>
         <LocationCard
           key={Math.random() * Math.random()}
-          location={spookyLocation.location}
-          description={spookyLocation.description}
+          location={spookyLocation}
         />
       </>
     )
