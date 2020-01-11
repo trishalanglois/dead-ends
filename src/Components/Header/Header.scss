@@ -12,9 +12,14 @@
 .main-header {
   height: 2em;
   font-family: $accent-font;
+  color: $light-grey;
   font-size: 4em;
   font-weight: 200;
   margin-bottom: -.5em;
+}
+
+a {
+  text-decoration: none;
 }
 
 .header-line {
