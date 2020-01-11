@@ -12,3 +12,8 @@ export const setSpookyLocations = locations => ({
   type: 'SET_SPOOKY_LOCATIONS',
   locations
 })
+
+export const updateFavorites = location => ({
+  type: 'UPDATE_FAVORITES',
+  location
+})

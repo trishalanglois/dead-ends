@@ -6,7 +6,7 @@ import locationData from '../../data.json';
 import { Redirect, Link } from 'react-router-dom';
 
 
-class Form extends Component {
+export class Form extends Component {
   constructor() {
     super();
     this.state = {
@@ -51,7 +51,6 @@ class Form extends Component {
       this.setState({ ready: true })
       this.props.setSpookyLocations(filteredLocations);
     }
-
   }
 
   handleError() {
@@ -104,8 +103,5 @@ export const mapDispatchToProps = dispatch => ({
   setLocation: location => dispatch(setLocation(location)),
   setSpookyLocations: locations => dispatch(setSpookyLocations(locations))
 })
-
-
-
 
 export default connect(null, mapDispatchToProps)(Form);

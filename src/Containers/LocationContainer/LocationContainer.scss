@@ -1,0 +1,31 @@
+@import '../../scss/variables';
+
+.locations-container {
+  background-image: url('../../images/background.jpg');
+  background-size: contain;
+  background-position: center;
+  height: 88vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.locations-container-subheader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-subheader {
+  font-family: $accent-font;
+  font-size: 3em;
+  margin: 0px 2em 1em 2em;
+  color: $light-grey;
+  font-weight: 200;
+  width: auto;
+}
+
+.favorites-button {
+  @extend .location-subheader;
+  font-size: 2em;
+}
