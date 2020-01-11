@@ -1,6 +1,6 @@
-export const updateWishlist = (state = [], action) => {
+export const updateFavorites = (state = [], action) => {
   switch (action.type) {
-    case 'UPDATE_WISHLIST':
+    case 'UPDATE_FAVORITES':
       return [...state, action.location]
     default:
       return state

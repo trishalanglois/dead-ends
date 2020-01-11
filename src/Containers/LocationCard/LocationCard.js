@@ -1,10 +1,10 @@
 import React from 'react';
 import './LocationCard.scss';
-import { updateWishlist } from '../../actions/actions';
+import { updateFavorites } from '../../actions/actions';
 import { connect } from 'react-redux';
 
 
-export const LocationCard = ({ location, updateWishlist }) => {
+export const LocationCard = ({ location, updateFavorites }) => {
 
   return (
     <aside className="card">
@@ -12,7 +12,7 @@ export const LocationCard = ({ location, updateWishlist }) => {
       <h3 className="card-title">{location.location}</h3>
 
       <div className="card-button-container">
-        <button className="card-button" onClick={() => updateWishlist(location)}>Add to Wishlist</button>
+        <button className="card-button" onClick={() => updateFavorites(location)}>Add to Favorites</button>
         <button className="card-button">View Map</button>
       </div>
 
@@ -23,7 +23,7 @@ export const LocationCard = ({ location, updateWishlist }) => {
 }
 
 export const mapDispatchToProps = dispatch => ({
-  updateWishlist: newLocation => dispatch(updateWishlist(newLocation))
+  updateFavorites: newLocation => dispatch(updateFavorites(newLocation))
 })
 
 export default connect(null, mapDispatchToProps)(LocationCard);

@@ -13,7 +13,7 @@ export const setSpookyLocations = locations => ({
   locations
 })
 
-export const updateWishlist = location => ({
-  type: 'UPDATE_WISHLIST',
+export const updateFavorites = location => ({
+  type: 'UPDATE_FAVORITES',
   location
 })
