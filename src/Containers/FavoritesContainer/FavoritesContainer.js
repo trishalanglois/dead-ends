@@ -4,8 +4,6 @@ import LocationCard from '../LocationCard/LocationCard';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-
-
 export const FavoritesContainer = ({ favoriteLocations }) => {
   const showLocations = favoriteLocations.map(spookyLocation => {
     return (
