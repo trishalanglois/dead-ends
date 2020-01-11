@@ -1,20 +1,13 @@
 @import '../../scss/variables';
 
-.locations-container {
-  background-image: url('../../images/background.jpg');
-  background-size: contain;
-  background-position: center;
-  height: 88vh;
-  width: 100vw;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-}
 
 .locations-container-subheader {
   display: flex;
   justify-content: space-between;
+  background-color: $dark-color;
+  height: 100%;
 }
+
 
 .location-subheader {
   font-family: $accent-font;
@@ -28,4 +21,17 @@
 .favorites-button {
   @extend .location-subheader;
   font-size: 2em;
+}
+
+.main-section {
+  background-image: url('../../images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 88vh;
+  width: 100vw;
+}
+
+.locations-cards-container {
+  overflow: auto;
+  width: 50%;
 }
