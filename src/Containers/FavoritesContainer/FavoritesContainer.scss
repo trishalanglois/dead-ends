@@ -1,0 +1,11 @@
+@import '../../scss/variables';
+
+.no-locations-error {
+  font-family: $accent-font;
+  color: $light-grey;
+  font-size: 2em;
+  font-weight: 200;
+  height: 100vh;
+  padding-top: 5em;
+  margin-top: -1em;
+}
