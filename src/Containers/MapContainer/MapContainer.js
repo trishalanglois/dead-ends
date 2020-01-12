@@ -28,29 +28,40 @@ onClose = props => {
 
   render() {
     return (
-        <Map
-          google={this.props.google}
-          zoom={14}
-          style={mapStyles}
-          initialCenter={{
-            lat: this.props.currentMap.latitude,
-            lng: this.props.currentMap.longitude
-          }}
-        >
-          <Marker
-              onClick={this.onMarkerClick}
-              name= {this.props.currentMap.location}
-            />
-            <InfoWindow
-              marker={this.state.activeMarker}
-              visible={this.state.showingInfoWindow}
-              onClose={this.onClose}
-            >
-              <div>
-                <h4>{this.state.selectedPlace.location}</h4>
-              </div>
-            </InfoWindow>
-        </Map>
+      <main>
+        <aside className="card">
+          <div className="card-title-container">
+            <h3 className="card-title">{this.props.currentMap.location}</h3>
+            <button className="card-button" onClick={() => this.props.updateFavorites(this.props.currentMap)}>Add to Favorites</button>
+          </div>
+          <p className="card-description">{this.props.currentMap.description}</p>
+        </aside>
+
+
+          <Map
+            google={this.props.google}
+            zoom={14}
+            style={mapStyles}
+            initialCenter={{
+              lat: this.props.currentMap.latitude,
+              lng: this.props.currentMap.longitude
+            }}
+          >
+            <Marker
+                onClick={this.onMarkerClick}
+                name= {this.props.currentMap.location}
+              />
+              <InfoWindow
+                marker={this.state.activeMarker}
+                visible={this.state.showingInfoWindow}
+                onClose={this.onClose}
+              >
+                <div>
+                  <h4>{this.state.selectedPlace.location}</h4>
+                </div>
+              </InfoWindow>
+          </Map>
+        </main>
     )
   }
 }

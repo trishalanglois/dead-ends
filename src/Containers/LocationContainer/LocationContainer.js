@@ -4,7 +4,7 @@ import LocationCard from '../LocationCard/LocationCard';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { GoogleApiWrapper } from 'google-maps-react';
-import MapContainer from '../../Components/MapContainer/MapContainer';
+import MapContainer from '../../Containers/MapContainer/MapContainer';
 
 
 export const LocationContainer = ({ locations, location, mapLocation }) => {
@@ -28,12 +28,7 @@ export const LocationContainer = ({ locations, location, mapLocation }) => {
         </Link>
       </div>
       <div className="main-section">
-        <aside className="locations-cards-container">
           {showLocations}
-        </aside>
-        // <aside className="map-container">
-        //   {mapLocation.location && <MapContainer />}
-        // </aside>
       </div>
     </main>
   )
