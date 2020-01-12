@@ -65,7 +65,7 @@ export class Form extends Component {
         <form>
           <label className="input-label">Ghost Hunter Name</label>
           <input
-            className="form-input"
+            className="name-input form-input"
             value={this.state.username}
             name="username"
             type="text"
@@ -73,7 +73,7 @@ export class Form extends Component {
           />
           <label className="input-label">Location</label>
           <input
-            className="form-input"
+            className="form-input location-input"
             placeholder="e.g. Denver, CO"
             value={this.state.location}
             name="location"

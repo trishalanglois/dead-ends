@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form Form Component should match the snapshot when there is an error in state 1`] = `ShallowWrapper {}`;
+
+exports[`Form Form Component should match the snapshot when there is no error in state 1`] = `ShallowWrapper {}`;
