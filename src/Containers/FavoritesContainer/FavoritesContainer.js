@@ -5,16 +5,19 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 export const FavoritesContainer = ({ favoriteLocations }) => {
-  const showLocations = favoriteLocations.map(spookyLocation => {
+
+  const favoritesPresent = favoriteLocations.length > 0
+  const builtFavorites = favoriteLocations.map(spookyLocation => {
     return (
-      <>
-        <LocationCard
+        <>
+          <LocationCard
           key={Math.random() * Math.random()}
-          location={spookyLocation}
-        />
-      </>
-    )
-  })
+          cardLocation={spookyLocation}
+          />
+        </>
+      )
+    }
+  )
 
   return (
     <main className="locations-container">
@@ -26,10 +29,11 @@ export const FavoritesContainer = ({ favoriteLocations }) => {
       </div>
       <div className="main-section">
         <aside className="locations-cards-container">
-          {showLocations}
-        </aside>
-        <aside className="map-container">
-          
+          { favoritesPresent && builtFavorites}
+          {
+            !favoritesPresent &&
+            <h3 className="no-locations-error">Add favorite locations to view them here.</h3>
+          }
         </aside>
       </div>
     </main>
