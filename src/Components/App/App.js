@@ -5,8 +5,7 @@ import Form from '../../Containers/Form/Form';
 import { Route } from 'react-router-dom';
 import LocationContainer from '../../Containers/LocationContainer/LocationContainer';
 import FavoritesContainer from '../../Containers/FavoritesContainer/FavoritesContainer';
-
-
+import MapContainer from '../../Containers/MapContainer/MapContainer'
 
 export class App extends Component {
 
@@ -17,6 +16,7 @@ export class App extends Component {
         <Route exact path="/" component={Form}/>
         <Route path="/locations" component={LocationContainer}/>
         <Route path="/favorites" component={FavoritesContainer}/>
+        <Route path="/location" component={MapContainer}/>
       </>
 
     )

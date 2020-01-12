@@ -31,9 +31,9 @@ export const LocationContainer = ({ locations, location, mapLocation }) => {
         <aside className="locations-cards-container">
           {showLocations}
         </aside>
-        <aside className="map-container">
-          {mapLocation.location && <MapContainer />}
-        </aside>
+        // <aside className="map-container">
+        //   {mapLocation.location && <MapContainer />}
+        // </aside>
       </div>
     </main>
   )
