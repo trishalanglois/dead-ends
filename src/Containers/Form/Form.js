@@ -5,7 +5,6 @@ import { currentUser, setLocation, setSpookyLocations } from '../../actions/acti
 import locationData from '../../data.json';
 import { Redirect, Link } from 'react-router-dom';
 
-
 export class Form extends Component {
   constructor() {
     super();
