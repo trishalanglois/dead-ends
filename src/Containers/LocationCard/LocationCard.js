@@ -24,8 +24,6 @@ export class LocationCard extends Component {
     <div className="card-title-container">
       <h3 className="card-title">{this.props.cardLocation.location}</h3>
 
-      <div className="card-button-container">
-        <button className="card-button" onClick={() => this.props.updateFavorites(this.props.cardLocation)}>Add to Favorites</button>
 
         <Link to={`location/${this.props.cardLocation.location}`}>
 
@@ -33,7 +31,6 @@ export class LocationCard extends Component {
 
         </Link>
 
-      </div>
 
     </div>
       <p className="card-description">{this.props.cardLocation.description}</p>
