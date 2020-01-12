@@ -32,16 +32,8 @@ onClose = props => {
 
       <main className="map-view">
 
-        <aside className="card">
-          <div className="card-title-container">
-            <h3 className="card-title">{this.props.currentMap.location}</h3>
-            <button className="card-button" onClick={() => this.props.updateFavorites(this.props.currentMap)}>Add to Favorites</button>
-          </div>
-          <h4 className="card-subtitle">{this.props.currentMap.city}, {this.props.currentMap.state}</h4>
-          <p className="card-description">{this.props.currentMap.description}</p>
-        </aside>
 
-
+        // <div className="map-container">
           <Map
             className="map-component"
             google={this.props.google}
@@ -66,7 +58,17 @@ onClose = props => {
                 </div>
               </InfoWindow>
           </Map>
-        </main>
+
+          <aside className="card map-card-view">
+            <div className="card-title-container">
+            <h3 className="card-title">{this.props.currentMap.location}</h3>
+            <button className="card-button" onClick={() => this.props.updateFavorites(this.props.currentMap)}>Add to Favorites</button>
+            </div>
+            <h4 className="card-subtitle">{this.props.currentMap.city}, {this.props.currentMap.state}</h4>
+            <p className="card-description">{this.props.currentMap.description}</p>
+          </aside>
+        // </div>
+      </main>
     )
   }
 }
