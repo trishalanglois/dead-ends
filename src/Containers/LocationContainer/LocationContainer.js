@@ -4,15 +4,16 @@ import LocationCard from '../LocationCard/LocationCard';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { GoogleApiWrapper } from 'google-maps-react';
+import MapContainer from '../../Containers/MapContainer/MapContainer';
 
 
-export const LocationContainer = ({ locations, location }) => {
+export const LocationContainer = ({ locations, location, mapLocation }) => {
   const showLocations = locations.map(spookyLocation => {
     return (
       <>
         <LocationCard
           key={Math.random() * Math.random()}
-          location={spookyLocation}
+          cardLocation={spookyLocation}
         />
       </>
     )
@@ -27,12 +28,7 @@ export const LocationContainer = ({ locations, location }) => {
         </Link>
       </div>
       <div className="main-section">
-        <aside className="locations-cards-container">
           {showLocations}
-        </aside>
-        <aside className="map-container">
-          
-        </aside>
       </div>
     </main>
   )
@@ -40,7 +36,8 @@ export const LocationContainer = ({ locations, location }) => {
 
 export const mapStateToProps = state => ({
   location: state.location,
-  locations: state.spookyLocations
+  locations: state.spookyLocations,
+  mapLocation: state.currentMap
 })
 
 export default connect(mapStateToProps)(LocationContainer)

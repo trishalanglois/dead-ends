@@ -6,6 +6,7 @@
   margin: 0em 2em 2em 2em;
   padding: 2em 2em 1em 2em;
   background-color: $light-grey;
+  border: 1.5px solid $dark-color;
 }
 
 .card-title {
@@ -33,12 +34,13 @@
 }
 
 .card-button {
-  display: block;
   float: right;
-  font-size: 1.25em;
+  font-size: 1.35em;
   font-family: $main-font;
   margin: .25em;
-  width: 100%;
+  padding: 0em 1em -1em 1em;
+  width: 10em;
+  height: 2em;
   border-style: none;
   background-color: $medium-grey;
     &:hover {
