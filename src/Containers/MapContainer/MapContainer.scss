@@ -35,6 +35,8 @@
 .map-card-view {
   float: right;
   margin: 10% 15%;
+  position: relative;
+  z-index: 100;
 }
 
 .card-subtitle {
@@ -42,13 +44,22 @@
   margin: 0em;
 }
 
-.card-button {
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.01);
-    background-color: $dark-grey;
-  }
-  &:focus {
-    background-color: $wishlist-color;
-  }
+.map-button {
+  float: right;
+  font-size: 1.35em;
+  font-family: $main-font;
+  margin: .25em;
+  padding: 0em 1em -1em 1em;
+  width: 10em;
+  height: 2em;
+  border-style: none;
+  background-color: $medium-grey;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.01);
+      background-color: $dark-grey;
+    }
+    &:focus {
+      background-color: $wishlist-color;
+    }
 }
