@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoritesContainer should match the snapshot when there are favorite locations 1`] = `ShallowWrapper {}`;
+
+exports[`FavoritesContainer should match the snapshot when there are no favorite locations 1`] = `ShallowWrapper {}`;

@@ -10,8 +10,8 @@ export const FavoritesContainer = ({ favoriteLocations }) => {
     return (
         <>
           <LocationCard
-          key={Math.random() * Math.random()}
-          cardLocation={spookyLocation}
+            key={Math.random() * Math.random()}
+            cardLocation={spookyLocation}
           />
         </>
       )
