@@ -8,11 +8,11 @@ import MapContainer from '../../Containers/MapContainer/MapContainer';
 
 
 export const LocationContainer = ({ locations, location, mapLocation }) => {
-  const showLocations = locations.map(spookyLocation => {
+  const showLocations = locations.map((spookyLocation, i) => {
     return (
       <>
         <LocationCard
-          key={Math.random() * Math.random()}
+          key={Math.random() * i}
           cardLocation={spookyLocation}
         />
       </>

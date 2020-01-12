@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { updateFavorites } from '../../actions/actions';
 import { Link } from 'react-router-dom';
 
-
 const mapStyles = {
   width: '40%',
   height: '50%',
@@ -17,9 +16,7 @@ export class MapContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showingInfoWindow: false,
-      activeMarker: {},
-      selectedPlace: `${this.props.currentMap}`
+      selectedPlace: `${this.props.currentMap.location}`
     }
   }
 
@@ -67,7 +64,6 @@ onClose = props => {
                 </div>
               </InfoWindow>
           </Map>
-
           <aside className="card map-card-view">
             <div className="card-title-container">
             <h3 className="card-title">{this.props.currentMap.location}</h3>
