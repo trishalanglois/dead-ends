@@ -1,6 +1,6 @@
 import * as actions from './actions';
 
-describe.only('action', () => {
+describe('action', () => {
   it('should update the current user', () => {
     const user = 'KWoo';
     const result = actions.currentUser(user);
