@@ -34,7 +34,6 @@ onClose = props => {
 
   render() {
     return (
-
       <main className="map-view">
         <div className="map-container-subheader">
           <Link to={'/locations'}>
@@ -44,8 +43,6 @@ onClose = props => {
             <h3 className="favorites-button">View Favorites</h3>
           </Link>
         </div>
-
-        // <div className="map-container">
           <Map
             className="map-component"
             google={this.props.google}
@@ -79,7 +76,6 @@ onClose = props => {
             <h4 className="card-subtitle">{this.props.currentMap.city}, {this.props.currentMap.state}</h4>
             <p className="card-description">{this.props.currentMap.description}</p>
           </aside>
-        // </div>
       </main>
     )
   }
