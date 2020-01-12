@@ -17,3 +17,8 @@ export const updateFavorites = location => ({
   type: 'UPDATE_FAVORITES',
   location
 })
+
+export const updateClickedCard = location => ({
+  type: 'UPDATE_CLICKED_CARD',
+  location
+})

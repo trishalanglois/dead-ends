@@ -7,13 +7,13 @@ import { GoogleApiWrapper } from 'google-maps-react';
 import MapContainer from '../../Components/MapContainer/MapContainer';
 
 
-export const LocationContainer = ({ locations, location }) => {
+export const LocationContainer = ({ locations, location, mapLocation }) => {
   const showLocations = locations.map(spookyLocation => {
     return (
       <>
         <LocationCard
           key={Math.random() * Math.random()}
-          location={spookyLocation}
+          cardLocation={spookyLocation}
         />
       </>
     )
@@ -32,7 +32,7 @@ export const LocationContainer = ({ locations, location }) => {
           {showLocations}
         </aside>
         <aside className="map-container">
-          <MapContainer />
+          {mapLocation.location && <MapContainer />}
         </aside>
       </div>
     </main>
@@ -41,7 +41,8 @@ export const LocationContainer = ({ locations, location }) => {
 
 export const mapStateToProps = state => ({
   location: state.location,
-  locations: state.spookyLocations
+  locations: state.spookyLocations,
+  mapLocation: state.currentMap
 })
 
 export default connect(mapStateToProps)(LocationContainer)
