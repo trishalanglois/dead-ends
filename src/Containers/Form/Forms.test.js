@@ -81,7 +81,66 @@ describe('Form', () => {
       mockProps.setLocation('Denver, CO');
 
       expect(mockMapDispatchToProps).toHaveBeenCalledWith(actionToDispatch);
+    })
 
+    it('should call mapDispatchToProps with an array of locations after a user has entered a location', () => {
+      const mockMapDispatchToProps = jest.fn();
+      const actionToDispatch = setSpookyLocations([
+          {
+            "city": "Denver",
+            "country": "United States",
+            "description": "BOO!",
+            "location": "Ada Cemetery",
+            "state": "Colorado",
+            "state_abbrev": "CO",
+            "longitude": -85.50489309999999,
+            "latitude": 42.9621061,
+            "city_longitude": -85.4954803,
+            "city_latitude": 42.960727
+          },
+          {
+            "city": "Denver",
+            "country": "United States",
+            "description": "Spooky stuff.",
+            "location": "North Adams Rd.",
+            "state": "Colorado",
+            "state_abbrev": "CO",
+            "longitude": -84.3818434,
+            "latitude": 41.9714248,
+            "city_longitude": -84.3471684,
+            "city_latitude": 41.986434
+        }
+      ]);
+      const mockProps = mapDispatchToProps(mockMapDispatchToProps);
+
+      mockProps.setSpookyLocations([
+          {
+            "city": "Denver",
+            "country": "United States",
+            "description": "BOO!",
+            "location": "Ada Cemetery",
+            "state": "Colorado",
+            "state_abbrev": "CO",
+            "longitude": -85.50489309999999,
+            "latitude": 42.9621061,
+            "city_longitude": -85.4954803,
+            "city_latitude": 42.960727
+          },
+          {
+            "city": "Denver",
+            "country": "United States",
+            "description": "Spooky stuff.",
+            "location": "North Adams Rd.",
+            "state": "Colorado",
+            "state_abbrev": "CO",
+            "longitude": -84.3818434,
+            "latitude": 41.9714248,
+            "city_longitude": -84.3471684,
+            "city_latitude": 41.986434
+        }
+      ])
+
+      expect(mockMapDispatchToProps).toHaveBeenCalledWith(actionToDispatch)
     })
 
   })
