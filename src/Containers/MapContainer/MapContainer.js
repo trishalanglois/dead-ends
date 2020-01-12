@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import './MapContainer.scss';
 import { connect } from 'react-redux';
+import { updateFavorites } from '../../actions/actions';
+import { Link } from 'react-router-dom';
+
 
 const mapStyles = {
-  width: '30%',
-  height: '70%'
+  width: '40%',
+  height: '50%',
+  margin: '5%',
+  border: '1px solid black'
 }
 
 export class MapContainer extends Component {
@@ -31,7 +36,14 @@ onClose = props => {
     return (
 
       <main className="map-view">
-
+        <div className="map-container-subheader">
+          <Link to={'/locations'}>
+            <h2 className="map-subheader">Return to all locations</h2>
+          </Link>
+          <Link to={'/favorites'}>
+            <h3 className="favorites-button">View Favorites</h3>
+          </Link>
+        </div>
 
         // <div className="map-container">
           <Map
@@ -77,8 +89,12 @@ export const mapStateToProps = state => ({
   currentMap: state.currentMap
 })
 
+export const mapDispatchToProps = dispatch => ({
+  updateFavorites: newLocation => dispatch(updateFavorites(newLocation)),
+})
+
 const wrappedMapContainer = GoogleApiWrapper({
   apiKey: 'AIzaSyBFQ1czovRlzvB4l3QxC5YwoxJ_URDKP6g'
 })(MapContainer)
 
-export default connect(mapStateToProps)(wrappedMapContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(wrappedMapContainer)

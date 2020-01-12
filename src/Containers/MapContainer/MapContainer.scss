@@ -1,3 +1,5 @@
+@import '../../scss/variables';
+
 .map-view {
   background-image: url('../../images/background.jpg');
   background-size: cover;
@@ -12,6 +14,24 @@
   // overflow: auto;
 }
 
+.map-container-subheader {
+  display: flex;
+  justify-content: space-between;
+  background-color: $dark-color;
+  height: 10%;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.map-subheader {
+  font-family: $accent-font;
+  font-size: 2em;
+  margin: 0px 1em;
+  color: $light-grey;
+  font-weight: 200;
+  width: auto;
+}
+
 .map-card-view {
   float: right;
   margin: 10% 15%;
@@ -20,4 +40,15 @@
 .card-subtitle {
   font-size: 1.5em;
   margin: 0em;
+}
+
+.card-button {
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    background-color: $dark-grey;
+  }
+  &:focus {
+    background-color: $wishlist-color;
+  }
 }
