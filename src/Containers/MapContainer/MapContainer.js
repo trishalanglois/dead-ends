@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import './MapContainer.scss';
 import { connect } from 'react-redux';
 
 const mapStyles = {
@@ -28,17 +29,21 @@ onClose = props => {
 
   render() {
     return (
-      <main>
+
+      <main className="map-view">
+
         <aside className="card">
           <div className="card-title-container">
             <h3 className="card-title">{this.props.currentMap.location}</h3>
             <button className="card-button" onClick={() => this.props.updateFavorites(this.props.currentMap)}>Add to Favorites</button>
           </div>
+          <h4 className="card-subtitle">{this.props.currentMap.city}, {this.props.currentMap.state}</h4>
           <p className="card-description">{this.props.currentMap.description}</p>
         </aside>
 
 
           <Map
+            className="map-component"
             google={this.props.google}
             zoom={14}
             style={mapStyles}
