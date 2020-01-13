@@ -7,6 +7,9 @@
   height: 88vh;
   width: 100vw;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 form {
@@ -16,12 +19,9 @@ form {
   align-items: center;
   background-color: $dark-color;
   border: 2px solid $medium-grey;
-  // position: absolute;
   z-index: 2;
-  top: 18em;
-  left: 43%;
   padding: 1em;
-  margin: 4% auto;
+  margin: 0px auto;
 }
 
 
