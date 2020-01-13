@@ -1,5 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Form Form Component should match the snapshot when there is an error in state 1`] = `ShallowWrapper {}`;
+exports[`Form Form Component should match the snapshot when there is an error in state 1`] = `
+<main
+  className="form-container"
+>
+  <form>
+    <label
+      className="input-label"
+    >
+      Ghost Hunter Name
+    </label>
+    <input
+      className="name-input form-input"
+      name="username"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <label
+      className="input-label"
+    >
+      Location
+    </label>
+    <input
+      className="form-input location-input"
+      name="location"
+      onChange={[Function]}
+      placeholder="e.g. Denver, CO"
+      type="text"
+      value=""
+    />
+    <p
+      className="error"
+    >
+      Please enter a valid city and state.
+    </p>
+    <button
+      className="form-button"
+      onClick={[Function]}
+      type="button"
+    >
+      Begin the Hunt
+    </button>
+  </form>
+</main>
+`;
 
-exports[`Form Form Component should match the snapshot when there is no error in state 1`] = `ShallowWrapper {}`;
+exports[`Form Form Component should match the snapshot when there is no error in state 1`] = `
+<main
+  className="form-container"
+>
+  <form>
+    <label
+      className="input-label"
+    >
+      Ghost Hunter Name
+    </label>
+    <input
+      className="name-input form-input"
+      name="username"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <label
+      className="input-label"
+    >
+      Location
+    </label>
+    <input
+      className="form-input location-input"
+      name="location"
+      onChange={[Function]}
+      placeholder="e.g. Denver, CO"
+      type="text"
+      value=""
+    />
+    <button
+      className="form-button"
+      onClick={[Function]}
+      type="button"
+    >
+      Begin the Hunt
+    </button>
+  </form>
+</main>
+`;

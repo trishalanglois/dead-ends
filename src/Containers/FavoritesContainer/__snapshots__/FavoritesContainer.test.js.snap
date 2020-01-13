@@ -1,5 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FavoritesContainer should match the snapshot when there are favorite locations 1`] = `ShallowWrapper {}`;
+exports[`FavoritesContainer should match the snapshot when there are favorite locations 1`] = `
+<main
+  className="locations-container"
+>
+  <div
+    className="locations-container-subheader"
+  >
+    <h2
+      className="location-subheader"
+    >
+      Favorite Spooky Locations
+    </h2>
+    <Link
+      to="/locations"
+    >
+      <h3
+        className="favorites-button"
+      >
+        Back
+      </h3>
+    </Link>
+  </div>
+  <div
+    className="main-section"
+  >
+    <aside
+      className="locations-cards-container"
+    >
+      <Connect(LocationCard)
+        cardLocation={
+          Object {
+            "city": "Ada",
+            "city_latitude": 42.960727,
+            "city_longitude": -85.4954803,
+            "country": "United States",
+            "description": "BOO!",
+            "latitude": 42.9621061,
+            "location": "Ada Cemetery",
+            "longitude": -85.50489309999999,
+            "state": "Michigan",
+            "state_abbrev": "MI",
+          }
+        }
+        key="0.020955581196682962"
+      />
+    </aside>
+  </div>
+</main>
+`;
 
-exports[`FavoritesContainer should match the snapshot when there are no favorite locations 1`] = `ShallowWrapper {}`;
+exports[`FavoritesContainer should match the snapshot when there are no favorite locations 1`] = `
+<main
+  className="locations-container"
+>
+  <div
+    className="locations-container-subheader"
+  >
+    <h2
+      className="location-subheader"
+    >
+      Favorite Spooky Locations
+    </h2>
+    <Link
+      to="/locations"
+    >
+      <h3
+        className="favorites-button"
+      >
+        Back
+      </h3>
+    </Link>
+  </div>
+  <div
+    className="main-section"
+  >
+    <aside
+      className="locations-cards-container"
+    >
+      <h3
+        className="no-locations-error"
+      >
+        Add favorite locations to view them here.
+      </h3>
+    </aside>
+  </div>
+</main>
+`;

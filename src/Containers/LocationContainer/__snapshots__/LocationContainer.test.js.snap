@@ -1,3 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LocationContainer should match snapshot 1`] = `ShallowWrapper {}`;
+exports[`LocationContainer should match snapshot 1`] = `
+<main
+  className="locations-container"
+>
+  <div
+    className="locations-container-subheader"
+  >
+    <h2
+      className="location-subheader"
+    >
+      Denver, CO
+    </h2>
+    <Link
+      to="/favorites"
+    >
+      <h3
+        className="favorites-button"
+      >
+        View Favorites
+      </h3>
+    </Link>
+  </div>
+  <div
+    className="main-section"
+  >
+    <Connect(LocationCard)
+      cardLocation={
+        Object {
+          "city": "Denver",
+          "city_latitude": 42.960727,
+          "city_longitude": -85.4954803,
+          "country": "United States",
+          "description": "BOO!",
+          "latitude": 42.9621061,
+          "location": "Ada Cemetery",
+          "longitude": -85.50489309999999,
+          "state": "Colorado",
+          "state_abbrev": "CO",
+        }
+      }
+      key="0"
+    />
+    <Connect(LocationCard)
+      cardLocation={
+        Object {
+          "city": "Denver",
+          "city_latitude": 41.986434,
+          "city_longitude": -84.3471684,
+          "country": "United States",
+          "description": "Spooky stuff.",
+          "latitude": 41.9714248,
+          "location": "North Adams Rd.",
+          "longitude": -84.3818434,
+          "state": "Colorado",
+          "state_abbrev": "CO",
+        }
+      }
+      key="0.4148360405786464"
+    />
+  </div>
+</main>
+`;
