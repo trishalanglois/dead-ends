@@ -18,7 +18,7 @@ To access this repo, simply clone down and run `npm install` to access the neces
 
 ## User Interface and User Experience
 ### Landing Page
-![Landing page when the user starts the app]((https://imgur.com/VWrzN4G.png)
+![Landing page when the user starts the app](https://imgur.com/VWrzN4G.png)
 
 ### Spooky Locations
 
