@@ -3,8 +3,6 @@ import './LocationContainer.scss';
 import LocationCard from '../LocationCard/LocationCard';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { GoogleApiWrapper } from 'google-maps-react';
-import MapContainer from '../../Containers/MapContainer/MapContainer';
 import PropTypes from 'prop-types';
 
 export const LocationContainer = ({ locations, location, mapLocation }) => {

@@ -3,7 +3,7 @@ import './Form.scss';
 import { connect } from 'react-redux';
 import { currentUser, setLocation, setSpookyLocations } from '../../actions/actions';
 import locationData from '../../data.json';
-import { Redirect, Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export class Form extends Component {

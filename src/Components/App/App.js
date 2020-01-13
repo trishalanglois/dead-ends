@@ -10,7 +10,6 @@ import NoURLMatch from '../../Components/NoURLMatch/NoURLMatch';
 
 
 export class App extends Component {
-
   render() {
     return (
       <>
@@ -23,7 +22,6 @@ export class App extends Component {
           <Route component={NoURLMatch}/>
         </Switch>
       </>
-
     )
   }
 }

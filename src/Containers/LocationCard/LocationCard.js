@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './LocationCard.scss';
 import { updateFavorites, updateClickedCard, removeFavorite } from '../../actions/actions';
 import { connect } from 'react-redux';
-import { Redirect, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export const LocationCard = (props) => {
