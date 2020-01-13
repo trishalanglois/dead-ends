@@ -22,3 +22,8 @@ export const updateClickedCard = location => ({
   type: 'UPDATE_CLICKED_CARD',
   location
 })
+
+export const removeFavorite = location => ({
+  type: 'REMOVE_FAVORITE',
+  location
+})
