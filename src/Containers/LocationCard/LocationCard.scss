@@ -47,11 +47,11 @@
       transform: scale(1.01);
       background-color: $dark-grey;
     }
-    &:focus {
-      background-color: $wishlist-color;
-    }
 }
 
 .remove-button {
-  background-color: $wishlist-color;
+  width: 11.7em !important;
+  height: 2.5em !important;
+  background-color: $wishlist-color !important;
+  font-size: 1.15em !important;
 }
