@@ -16,10 +16,10 @@ exports[`LocationCard should match the snapshot 1`] = `
       className="button-wrapper"
     >
       <button
-        className="map-button"
+        className="map-button remove-button"
         onClick={[Function]}
       >
-        Add to Favorites
+        Remove from Favorites
       </button>
       <Link
         to="location/Ada Cemetery"

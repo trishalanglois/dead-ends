@@ -12,13 +12,11 @@ export const LocationCard = (props) => {
   <div className="card-title-container">
     <h3 className="card-title">{props.cardLocation.location}</h3>
     <div className="button-wrapper">
-
-    { isFavorite ?
-      <button className="map-button remove-button" onClick={() => props.removeFavorite(props.cardLocation)}>Remove from Favorites</button>
-    :
-      <button className="map-button" onClick={() => props.updateFavorites(props.cardLocation)}>Add to Favorites</button>
-    }
-
+      { isFavorite ?
+        <button className="map-button remove-button" onClick={() => props.removeFavorite(props.cardLocation)}>Remove from Favorites</button>
+      :
+        <button className="map-button" onClick={() => props.updateFavorites(props.cardLocation)}>Add to Favorites</button>
+      }
       <Link to={`location/${props.cardLocation.location}`}>
         <button className="card-button" onClick={() => props.updateClickedCard(props.cardLocation)}>View Map</button>
       </Link>
