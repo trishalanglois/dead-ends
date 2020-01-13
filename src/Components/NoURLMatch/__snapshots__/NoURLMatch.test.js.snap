@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoURLMatch should match the snapshot 1`] = `
+<main
+  className="no-url-container"
+>
+  <h2
+    className="no-url-match-message"
+  >
+    This page is a dead end.  Please return home.
+  </h2>
+</main>
+`;

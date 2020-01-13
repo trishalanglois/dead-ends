@@ -31,17 +31,17 @@ export class Form extends Component {
     if (location.match(regex)) {
       this.props.updateUser(this.state.username);
       this.props.setLocation(this.state.location);
-      this.findLocations(this.state.location);
+      this.findLocations(this.state.location, locationData);
     } else {
       this.handleError();
     }
   }
 
-  findLocations = (location) => {
+  findLocations = (location, data) => {
     const splitLocation = location.split(', ');
     const city = splitLocation[0];
     const state = splitLocation[1];
-    const filteredLocations = locationData.filter(spookySpot => {
+    const filteredLocations = data.filter(spookySpot => {
       return spookySpot.city === city && spookySpot.state_abbrev === state
     })
     if (!filteredLocations.length) {
@@ -65,7 +65,7 @@ export class Form extends Component {
         <form>
           <label className="input-label">Ghost Hunter Name</label>
           <input
-            className="form-input"
+            className="name-input form-input"
             value={this.state.username}
             name="username"
             type="text"
@@ -73,7 +73,7 @@ export class Form extends Component {
           />
           <label className="input-label">Location</label>
           <input
-            className="form-input"
+            className="form-input location-input"
             placeholder="e.g. Denver, CO"
             value={this.state.location}
             name="location"

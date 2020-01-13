@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MapContainer should match the snapshot 1`] = `
+<main
+  className="map-view"
+>
+  <div
+    className="map-container-subheader"
+  >
+    <Link
+      to="/locations"
+    >
+      <h2
+        className="map-subheader"
+      >
+        Return to all locations
+      </h2>
+    </Link>
+    <Link
+      to="/favorites"
+    >
+      <h3
+        className="favorites-button"
+      >
+        View Favorites
+      </h3>
+    </Link>
+  </div>
+  <Map
+    center={Object {}}
+    centerAroundCurrentLocation={false}
+    className="map-component"
+    containerStyle={Object {}}
+    initialCenter={
+      Object {
+        "lat": undefined,
+        "lng": undefined,
+      }
+    }
+    style={
+      Object {
+        "border": "1px solid black",
+        "height": "50%",
+        "margin": "5%",
+        "width": "40%",
+      }
+    }
+    visible={true}
+    zoom={14}
+  >
+    <Marker
+      name="Marker"
+    />
+    <InfoWindow
+      onClose={[Function]}
+      visible={false}
+    >
+      <div>
+        <h4 />
+      </div>
+    </InfoWindow>
+  </Map>
+  <aside
+    className="card map-card-view"
+  >
+    <div
+      className="card-title-container"
+    >
+      <h3
+        className="card-title"
+      />
+      <button
+        className="map-button"
+        onClick={[Function]}
+      >
+        Add to Favorites
+      </button>
+    </div>
+    <h4
+      className="card-subtitle"
+    >
+      , 
+    </h4>
+    <p
+      className="card-description"
+    />
+  </aside>
+</main>
+`;
