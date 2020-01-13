@@ -3,9 +3,7 @@ import { LocationContainer, mapStateToProps } from './LocationContainer';
 import { shallow } from 'enzyme';
 
 describe('LocationContainer', () => {
-
   let wrapper;
-
   it('should match snapshot', () => {
     const mockProps = {
     location: 'Denver, CO',
@@ -134,9 +132,7 @@ describe('LocationContainer', () => {
         "city_latitude": 42.960727
       }
     };
-
     const mappedProps = mapStateToProps(mockState);
-
     expect(mappedProps).toEqual(expected)
   })
 })
