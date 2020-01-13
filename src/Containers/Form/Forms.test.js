@@ -146,36 +146,72 @@ describe('Form', () => {
 
     describe('findLocations', () => {
       it('should set noLocations state to true if there are no matching locations from the user', () => {
-        const filteredLocations = [];
-        const mockEvent = wrapper.instance().findLocations('');
+        const filteredLocations = [{
+          "city": "Muskegon",
+          "country": "United States",
+          "description": "BOO!",
+          "location": "Ada Cemetery",
+          "state": "Colorado",
+          "state_abbrev": "CO",
+          "longitude": -85.50489309999999,
+          "latitude": 42.9621061,
+          "city_longitude": -85.4954803,
+          "city_latitude": 42.960727
+        }];
+        const mockEvent = wrapper.instance().findLocations('', filteredLocations);
 
         expect(wrapper.state('noLocations')).toEqual(true);
       })
 
-      // it('should state the ready state to true and call setSpookyLocations if there are matching locations from the user', () => {
-      //   const filteredLocations = [{
-      //     "city": "Denver",
-      //     "country": "United States",
-      //     "description": "BOO!",
-      //     "location": "Ada Cemetery",
-      //     "state": "Colorado",
-      //     "state_abbrev": "CO",
-      //     "longitude": -85.50489309999999,
-      //     "latitude": 42.9621061,
-      //     "city_longitude": -85.4954803,
-      //     "city_latitude": 42.960727
-      //   }];
-      //   const mockEvent = wrapper.instance().findLocations('Denver, CO');
-      //   wrapper.instance().setSpookyLocations = jest.fn();
-      //
-      //   expect(wrapper.state('ready')).toEqual(true);
-      //   expect(wrapper.instance().setSpookyLocations).toHaveBeenCalledWith(filteredLocations)
-      // })
+      it('should state the ready state to true and call setSpookyLocations if there are matching locations from the user', () => {
+        const locationsToFilter = [{
+          "city": "Denver",
+          "country": "United States",
+          "description": "BOO!",
+          "location": "Ada Cemetery",
+          "state": "Colorado",
+          "state_abbrev": "CO",
+          "longitude": -85.50489309999999,
+          "latitude": 42.9621061,
+          "city_longitude": -85.4954803,
+          "city_latitude": 42.960727
+        },
+        {
+          "city": "Muskegon",
+          "country": "United States",
+          "description": "BOO!",
+          "location": "Ada Cemetery",
+          "state": "Colorado",
+          "state_abbrev": "CO",
+          "longitude": -85.50489309999999,
+          "latitude": 42.9621061,
+          "city_longitude": -85.4954803,
+          "city_latitude": 42.960727
+        }];
+
+        const expected = [{
+          "city": "Denver",
+          "country": "United States",
+          "description": "BOO!",
+          "location": "Ada Cemetery",
+          "state": "Colorado",
+          "state_abbrev": "CO",
+          "longitude": -85.50489309999999,
+          "latitude": 42.9621061,
+          "city_longitude": -85.4954803,
+          "city_latitude": 42.960727
+        }]
+
+        wrapper.instance().findLocations('Denver, CO', locationsToFilter);
+
+        expect(wrapper.state('ready')).toEqual(true);
+        expect(mockSetSpookyLocations).toHaveBeenCalledWith(expected)
+      })
     })
 
     it('should set the error state to true if handleError has been called', () => {
       wrapper.instance().handleError();
-      
+
       expect(wrapper.state('error')).toEqual(true)
     })
   })

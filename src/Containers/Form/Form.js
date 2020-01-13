@@ -31,17 +31,17 @@ export class Form extends Component {
     if (location.match(regex)) {
       this.props.updateUser(this.state.username);
       this.props.setLocation(this.state.location);
-      this.findLocations(this.state.location);
+      this.findLocations(this.state.location, locationData);
     } else {
       this.handleError();
     }
   }
 
-  findLocations = (location) => {
+  findLocations = (location, data) => {
     const splitLocation = location.split(', ');
     const city = splitLocation[0];
     const state = splitLocation[1];
-    const filteredLocations = locationData.filter(spookySpot => {
+    const filteredLocations = data.filter(spookySpot => {
       return spookySpot.city === city && spookySpot.state_abbrev === state
     })
     if (!filteredLocations.length) {
