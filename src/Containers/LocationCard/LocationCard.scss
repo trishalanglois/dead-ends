@@ -1,5 +1,9 @@
 @import '../../scss/variables';
 
+* {
+  border: 1px solid red;
+}
+
 .card {
   font-family: $main-font;
   width: 50em;
