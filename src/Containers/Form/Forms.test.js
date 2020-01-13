@@ -201,7 +201,6 @@ describe('Form', () => {
           "city_longitude": -85.4954803,
           "city_latitude": 42.960727
         }]
-
         wrapper.instance().findLocations('Denver, CO', locationsToFilter);
 
         expect(wrapper.state('ready')).toEqual(true);
