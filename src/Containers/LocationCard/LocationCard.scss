@@ -1,5 +1,9 @@
 @import '../../scss/variables';
 
+* {
+  border: 1px solid red;
+}
+
 .card {
   font-family: $main-font;
   width: 50em;
@@ -47,8 +51,11 @@
       transform: scale(1.01);
       background-color: $dark-grey;
     }
-    &:focus {
-      background-color: $wishlist-color;
-    }
+}
 
+.remove-button {
+  width: 11.7em !important;
+  height: 2.5em !important;
+  background-color: $wishlist-color !important;
+  font-size: 1.15em !important;
 }

@@ -16,11 +16,12 @@ form {
   align-items: center;
   background-color: $dark-color;
   border: 2px solid $medium-grey;
-  position: absolute;
+  // position: absolute;
   z-index: 2;
   top: 18em;
   left: 43%;
   padding: 1em;
+  margin: 4% auto;
 }
 
 

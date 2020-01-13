@@ -66,8 +66,8 @@ onClose = props => {
           </Map>
           <aside className="card map-card-view">
             <div className="card-title-container">
-            <h3 className="card-title">{this.props.currentMap.location}</h3>
-            <button className="map-button" onClick={() => this.props.updateFavorites(this.props.currentMap)}>Add to Favorites</button>
+              <h3 className="card-title">{this.props.currentMap.location}</h3>
+              <button className="map-button" onClick={() => this.props.updateFavorites(this.props.currentMap)}>Add to Favorites</button>
             </div>
             <h4 className="card-subtitle">{this.props.currentMap.city}, {this.props.currentMap.state}</h4>
             <p className="card-description">{this.props.currentMap.description}</p>
