@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { currentUser, setLocation, setSpookyLocations } from '../../actions/actions';
 import locationData from '../../data.json';
 import { Redirect, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export class Form extends Component {
   constructor() {
@@ -104,3 +105,9 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(null, mapDispatchToProps)(Form);
+
+Form.propTypes = {
+  updateUser: PropTypes.func,
+  setLocation: PropTypes.func,
+  setSpookyLocations: PropTypes.func
+}

@@ -3,6 +3,7 @@ import './LocationCard.scss';
 import { updateFavorites, updateClickedCard, removeFavorite } from '../../actions/actions';
 import { connect } from 'react-redux';
 import { Redirect, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export const LocationCard = (props) => {
   const isFavorite = props.favorites.some(favorite => favorite.location === props.cardLocation.location)
@@ -39,3 +40,11 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(LocationCard);
+
+LocationCard.propTypes = {
+  updateFavorites: PropTypes.func,
+  updateClickedCard: PropTypes.func,
+  removeFavorite: PropTypes.func,
+  favorites: PropTypes.array,
+  cardLocation: PropTypes.object
+}

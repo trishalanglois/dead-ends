@@ -57,7 +57,7 @@ exports[`LocationContainer should match snapshot 1`] = `
           "state_abbrev": "CO",
         }
       }
-      key="0.1260441679876747"
+      key="0.07553100431340565"
     />
   </div>
 </main>

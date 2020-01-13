@@ -4,6 +4,8 @@ import './MapContainer.scss';
 import { connect } from 'react-redux';
 import { updateFavorites } from '../../actions/actions';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 
 const mapStyles = {
   width: '40%',
@@ -89,4 +91,8 @@ const wrappedMapContainer = GoogleApiWrapper({
   apiKey: 'AIzaSyBFQ1czovRlzvB4l3QxC5YwoxJ_URDKP6g'
 })(MapContainer)
 
-export default connect(mapStateToProps, mapDispatchToProps)(wrappedMapContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(wrappedMapContainer);
+
+MapContainer.propTypes = {
+  currentMap: PropTypes.object
+}

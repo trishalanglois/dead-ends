@@ -3,6 +3,7 @@ import './FavoritesContainer.scss';
 import LocationCard from '../LocationCard/LocationCard';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export const FavoritesContainer = ({ favoriteLocations }) => {
   const favoritesPresent = favoriteLocations.length > 0;
@@ -41,5 +42,8 @@ export const mapStateToProps = state => ({
   favoriteLocations: state.favorites
 })
 
-
 export default connect (mapStateToProps)(FavoritesContainer);
+
+FavoritesContainer.propTypes = {
+  favoriteLocations: PropTypes.array,
+}
