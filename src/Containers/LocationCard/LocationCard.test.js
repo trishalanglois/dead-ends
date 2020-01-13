@@ -1,6 +1,6 @@
 import React from 'react';
 import { LocationCard, mapDispatchToProps } from './LocationCard';
-import { updateFavorites, clickedLocation } from '../../actions/actions';
+import { updateFavorites, updateClickedCard } from '../../actions/actions';
 import { shallow } from 'enzyme';
 
 describe('LocationCard', () => {
@@ -30,6 +30,15 @@ describe('LocationCard', () => {
       const actionToDispatch = updateFavorites(mockProps);
       const mappedProps = mapDispatchToProps(mockDispatchFromProps);
       mappedProps.updateFavorites(mockProps);
+
+      expect(mockDispatchFromProps).toHaveBeenCalledWith(actionToDispatch);
+    })
+
+    it('should call updateClickedCard with a location when updateClickedCard is called from props', () => {
+      const mockDispatchFromProps = jest.fn();
+      const actionToDispatch = updateClickedCard(mockProps);
+      const mappedProps = mapDispatchToProps(mockDispatchFromProps);
+      mappedProps.updateClickedCard(mockProps);
 
       expect(mockDispatchFromProps).toHaveBeenCalledWith(actionToDispatch);
     })
