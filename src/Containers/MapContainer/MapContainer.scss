@@ -51,6 +51,7 @@
   height: 2em;
   border-style: none;
   background-color: $medium-grey;
+  z-index: 100;
     &:hover {
       cursor: pointer;
       transform: scale(1.01);
