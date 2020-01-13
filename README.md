@@ -21,6 +21,7 @@ To access this repo, simply clone down and run `npm install` to access the neces
 ![Landing page when the user starts the app](https://imgur.com/VWrzN4G.png)
 
 ### Spooky Locations
+![All the spooky locations in Denver, CO](https://imgur.com/eaOq0Zs.gif)
 
 ### Favorites
 
