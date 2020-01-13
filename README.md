@@ -35,4 +35,7 @@ Future iterations of this project will include the following:
 * Visited feature with notes for users to save spooky locations they have visited and include any notes they want to add
 * Using the user's current location, show spooky locations that are nearby
 
+### Project Requirements
+This was a solo project completed over the course of 5 days by [Trisha Langlois](https://github.com/trishalanglois) at Turing School of Software and Design.  [Project requirements can be found here.](https://frontend.turing.io/projects/module-3/binary-challenge.html)
+
 
