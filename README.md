@@ -29,4 +29,10 @@ To access this repo, simply clone down and run `npm install` to access the neces
 ### View Map
 ![View map of Cheesman Park](https://imgur.com/ggFKjUx.png)
 
+## Future Iterations
+Future iterations of this project will include the following:
+* Wishlist feature for users to save spooky locations they want to visit
+* Visited feature with notes for users to save spooky locations they have visited and include any notes they want to add
+* Using the user's current location, show spooky locations that are nearby
+
 
