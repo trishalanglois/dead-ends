@@ -24,7 +24,9 @@ To access this repo, simply clone down and run `npm install` to access the neces
 ![All the spooky locations in Denver, CO](https://imgur.com/eaOq0Zs.gif)
 
 ### Favorites
+![User's favorited locations](https://imgur.com/yEc5mCR.png)
 
 ### View Map
+![View map of Cheesman Park](https://imgur.com/ggFKjUx.png)
 
 
