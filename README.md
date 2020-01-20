@@ -16,7 +16,7 @@ Indulge your inner-witch with Dead Ends - a spooky app that allows you to find h
 
 To access this repo, simply clone down and run `npm install` to access the necessary packages.  For the best viewing experience, run `npm run start` and copy and paste your local server into the browser.
 
-Note that in order to use the "View Map" functionality of Dead Ends, you will need a [Google Maps API key](https://developers.google.com/maps/documentation/embed/get-api-key).  This value should be stored as the `REACT_APP_GOOGLE_MAPS_KEY` environment variable.
+Note that in order to use the "View Map" functionality of Dead Ends, you will need a [Google Maps API key](https://developers.google.com/maps/documentation/javascript/get-api-key).  This value should be stored as the `REACT_APP_GOOGLE_MAPS_KEY` environment variable.
 
 ## User Interface and User Experience
 ### Landing Page
