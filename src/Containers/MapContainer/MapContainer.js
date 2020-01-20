@@ -88,7 +88,7 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 const wrappedMapContainer = GoogleApiWrapper({
-  apiKey: 'AIzaSyBFQ1czovRlzvB4l3QxC5YwoxJ_URDKP6g'
+  apiKey: process.env.REACT_APP_GOOGLE_MAPS_KEY
 })(MapContainer)
 
 export default connect(mapStateToProps, mapDispatchToProps)(wrappedMapContainer);
